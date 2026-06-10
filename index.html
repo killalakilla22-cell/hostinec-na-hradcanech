@@ -1,0 +1,614 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Hostinec na Hradčanech | Rodinný hostinec v Rokycanech od roku 1890</title>
+  <meta name="description" content="Hostinec na Hradčanech v Rokycanech — rodinný podnik založený roku 1890. Poctivá česká kuchyně, dobře vychlazené plzeňské pivo a letní zahrádka. Josefa Tomáška 59, Rokycany.">
+
+  <meta property="og:title" content="Hostinec na Hradčanech | Rokycany">
+  <meta property="og:description" content="Rodinný hostinec od roku 1890. Poctivá česká kuchyně, čepované pivo a letní zahrádka v Rokycanech.">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="images/exterier.jpg">
+
+  <link rel="icon" type="image/svg+xml" href="favicon.svg">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@500;600;700;800;900&family=Cormorant+Garamond:ital,wght@1,500;1,600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+
+  <!-- Bootstrap 5.3 -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+
+  <!-- Custom theme (load after Bootstrap) -->
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body data-bs-spy="scroll" data-bs-target="#mainNavLinks" tabindex="0">
+
+  <!-- ======= TOPBAR ======= -->
+  <div class="topbar">
+    <div class="container d-flex justify-content-center justify-content-md-between align-items-center gap-3 py-2">
+      <p class="mb-0 d-none d-md-block">Po–Pá 10:00–22:00 &nbsp;·&nbsp; So–Ne 14:00–22:00</p>
+      <p class="mb-0">
+        <a href="tel:+420735076713">+420 735 076 713</a>
+        <span class="d-none d-sm-inline">
+          <span aria-hidden="true">&nbsp;·&nbsp;</span>
+          <a href="mailto:hostinec.hradcany@seznam.cz">hostinec.hradcany@seznam.cz</a>
+        </span>
+      </p>
+    </div>
+  </div>
+
+  <!-- ======= NAVBAR (Bootstrap navbar + offcanvas) ======= -->
+  <nav class="navbar navbar-expand-lg sticky-top site-navbar" id="siteNavbar">
+    <div class="container">
+      <a class="navbar-brand site-logo" href="#uvod" aria-label="Hostinec na Hradčanech – domů">
+        <span class="site-logo__main">Hostinec</span>
+        <span class="site-logo__sub">na Hradčanech</span>
+      </a>
+
+      <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#siteNav" aria-controls="siteNav" aria-label="Otevřít menu">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="offcanvas offcanvas-end site-offcanvas" tabindex="-1" id="siteNav" aria-labelledby="siteNavLabel">
+        <div class="offcanvas-header">
+          <p class="offcanvas-title site-logo site-logo--light mb-0" id="siteNavLabel">
+            <span class="site-logo__main">Hostinec</span>
+            <span class="site-logo__sub">na Hradčanech</span>
+          </p>
+          <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas" aria-label="Zavřít"></button>
+        </div>
+        <div class="offcanvas-body">
+          <ul class="navbar-nav ms-auto" id="mainNavLinks">
+            <li class="nav-item"><a class="nav-link" href="#uvod">Úvod</a></li>
+            <li class="nav-item"><a class="nav-link" href="#pribeh">Náš příběh</a></li>
+            <li class="nav-item"><a class="nav-link" href="#jidelni-listek">Jídelní lístek</a></li>
+            <li class="nav-item"><a class="nav-link" href="#napojovy-listek">Nápojový lístek</a></li>
+            <li class="nav-item"><a class="nav-link" href="#zahradka">Zahrádka</a></li>
+            <li class="nav-item"><a class="nav-link" href="#kontakt">Kde nás najdete</a></li>
+          </ul>
+          <div class="site-offcanvas__footer d-lg-none mt-auto pt-5 text-center">
+            <a class="site-offcanvas__phone d-block mb-2" href="tel:+420735076713">+420 735 076 713</a>
+            <p class="mb-0">Josefa Tomáška 59, 337 01 Rokycany</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <main>
+
+    <!-- ======= HERO / ÚVOD ======= -->
+    <section class="hero" id="uvod">
+      <div class="hero__bg" aria-hidden="true">
+        <img src="images/exterier.jpg" alt="" loading="eager">
+      </div>
+      <div class="hero__overlay" aria-hidden="true"></div>
+
+      <div class="container position-relative text-center hero__content">
+        <p class="hero__eyebrow reveal">Rodinný hostinec v Rokycanech &nbsp;·&nbsp; od roku 1890</p>
+        <h1 class="hero__title reveal">Hostinec<br>na Hradčanech</h1>
+        <p class="hero__tagline reveal">Místo, kde se setkává historie s přítomností.</p>
+        <div class="d-flex flex-column flex-sm-row justify-content-center gap-3 mt-5 reveal">
+          <a href="#jidelni-listek" class="btn btn-cream">Denní nabídka</a>
+          <a href="#kontakt" class="btn btn-outline-cream">Kde nás najdete</a>
+        </div>
+      </div>
+
+      <a href="#intro" class="hero__scroll" aria-label="Posunout dolů">
+        <span></span>
+      </a>
+    </section>
+
+    <!-- ======= MARQUEE ======= -->
+    <div class="marquee" aria-hidden="true">
+      <div class="marquee__track">
+        <span>Od roku 1890</span><i>✦</i>
+        <span>Poctivá česká kuchyně</span><i>✦</i>
+        <span>Čepované plzeňské pivo</span><i>✦</i>
+        <span>Letní zahrádka</span><i>✦</i>
+        <span>Rodinná tradice</span><i>✦</i>
+        <span>Od roku 1890</span><i>✦</i>
+        <span>Poctivá česká kuchyně</span><i>✦</i>
+        <span>Čepované plzeňské pivo</span><i>✦</i>
+        <span>Letní zahrádka</span><i>✦</i>
+        <span>Rodinná tradice</span><i>✦</i>
+      </div>
+    </div>
+
+    <!-- ======= INTRO STATEMENT ======= -->
+    <section class="intro section-pad" id="intro">
+      <div class="container">
+        <div class="row justify-content-center text-center">
+          <div class="col-lg-10 col-xl-9">
+            <p class="eyebrow reveal">Vítejte na Hradčanech</p>
+            <h2 class="intro__statement reveal">
+              Útulný kout v malebném městě Rokycany, kde si vychutnáte
+              <em>dobře vychlazené pivo</em> a strávíte příjemné chvíle
+              v&nbsp;přátelském prostředí.
+            </h2>
+          </div>
+        </div>
+
+        <div class="row row-cols-1 row-cols-md-3 g-0 info-cards">
+          <div class="col reveal">
+            <div class="info-card h-100">
+              <p class="info-card__label">Otevírací doba</p>
+              <p class="info-card__value mb-0">Po–Pá 10:00–22:00<br>So–Ne 14:00–22:00</p>
+            </div>
+          </div>
+          <div class="col reveal">
+            <div class="info-card h-100">
+              <p class="info-card__label">Kuchyně</p>
+              <p class="info-card__value mb-0">Vaříme ve všední dny<br>10:00–14:00</p>
+            </div>
+          </div>
+          <div class="col reveal">
+            <div class="info-card h-100">
+              <p class="info-card__label">Rezervace</p>
+              <p class="info-card__value mb-0"><a href="tel:+420735076713">+420 735 076 713</a><br><a href="mailto:hostinec.hradcany@seznam.cz">hostinec.hradcany@seznam.cz</a></p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ======= NÁŠ PŘÍBĚH ======= -->
+    <section class="story section-pad" id="pribeh">
+      <div class="container">
+        <div class="row g-5 align-items-center">
+          <div class="col-lg-6 reveal">
+            <div class="story__media">
+              <figure class="story__photo mb-0">
+                <img src="images/exterier-ulice.jpg" alt="Historické průčelí Hostince na Hradčanech" loading="lazy" class="w-100">
+              </figure>
+              <figure class="story__photo story__photo--offset mb-0">
+                <img src="images/interier.jpg" alt="Interiér hostince" loading="lazy" class="w-100 h-100 object-fit-cover">
+              </figure>
+              <div class="story__badge" aria-hidden="true">
+                <span class="story__badge-est">est.</span>
+                <span class="story__badge-year">1890</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-6">
+            <p class="eyebrow reveal">Náš příběh</p>
+            <h2 class="section-title mb-4 reveal">Tradice psaná<br>od roku 1890</h2>
+            <p class="story__text reveal">
+              Hostinec na Hradčanech se nachází v malebném městě Rokycany
+              a&nbsp;je místem, kde se setkává historie s&nbsp;přítomností.
+            </p>
+            <p class="story__text reveal">
+              Tento rodinný podnik, založený již v&nbsp;roce 1890, je synonymem
+              tradice a&nbsp;pohostinnosti. Můžete zde nalézt útulný kout, kde si
+              vychutnáte dobře vychlazené pivo a&nbsp;strávíte příjemné chvíle
+              v&nbsp;přátelském prostředí.
+            </p>
+            <p class="story__quote reveal">„U nás jste vždy vítáni.“</p>
+
+            <div class="d-flex flex-wrap story__stats reveal">
+              <div class="stat">
+                <span class="stat__number">1890</span>
+                <span class="stat__label">rok založení</span>
+              </div>
+              <div class="stat">
+                <span class="stat__number">135+</span>
+                <span class="stat__label">let pohostinnosti</span>
+              </div>
+              <div class="stat">
+                <span class="stat__number">5</span>
+                <span class="stat__label">piv na čepu</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ======= JÍDELNÍ LÍSTEK ======= -->
+    <section class="menu section-pad" id="jidelni-listek">
+      <div class="container">
+        <div class="text-center menu__head">
+          <p class="eyebrow eyebrow--light reveal">Jídelní lístek</p>
+          <h2 class="section-title section-title--light reveal">Denní nabídka</h2>
+          <p class="menu__date reveal">Středa 10.&nbsp;června 2026</p>
+          <p class="menu__note reveal">Vaříme ve všední dny od 10:00 do 14:00 · nabídka se denně obměňuje</p>
+        </div>
+
+        <div class="row g-5">
+          <div class="col-lg-7">
+            <div class="menu-group reveal">
+              <h3 class="menu-group__title">Polévky</h3>
+              <ul class="list-unstyled mb-0">
+                <li class="menu-item">
+                  <span class="menu-item__amount">0,25 l</span>
+                  <span class="menu-item__name">Čočková s uzeným masem</span>
+                  <span class="menu-item__dots" aria-hidden="true"></span>
+                  <span class="menu-item__price">48,-</span>
+                </li>
+              </ul>
+            </div>
+
+            <div class="menu-group mb-0 reveal">
+              <h3 class="menu-group__title">Hlavní jídla</h3>
+              <ul class="list-unstyled mb-0">
+                <li class="menu-item">
+                  <span class="menu-item__amount">100 g</span>
+                  <span class="menu-item__name">Kančí guláš, houskový knedlík</span>
+                  <span class="menu-item__dots" aria-hidden="true"></span>
+                  <span class="menu-item__price">185,-</span>
+                </li>
+                <li class="menu-item">
+                  <span class="menu-item__amount">100 g</span>
+                  <span class="menu-item__name">Znojemská hovězí pečeně, rýže</span>
+                  <span class="menu-item__dots" aria-hidden="true"></span>
+                  <span class="menu-item__price">180,-</span>
+                </li>
+                <li class="menu-item">
+                  <span class="menu-item__amount">300 g</span>
+                  <span class="menu-item__name">Grenadýrský pochod</span>
+                  <span class="menu-item__dots" aria-hidden="true"></span>
+                  <span class="menu-item__price">170,-</span>
+                </li>
+                <li class="menu-item">
+                  <span class="menu-item__amount">200 g</span>
+                  <span class="menu-item__name">Kuře „ala bažant“, bramborový knedlík</span>
+                  <span class="menu-item__dots" aria-hidden="true"></span>
+                  <span class="menu-item__price">170,-</span>
+                </li>
+                <li class="menu-item">
+                  <span class="menu-item__amount">100 g</span>
+                  <span class="menu-item__name">Přírodní kuřecí kapsa, opečené brambory</span>
+                  <span class="menu-item__dots" aria-hidden="true"></span>
+                  <span class="menu-item__price">185,-</span>
+                </li>
+                <li class="menu-item">
+                  <span class="menu-item__amount">300 g</span>
+                  <span class="menu-item__name">Zapečené gnocchi s kuřecím masem ve smetanové omáčce</span>
+                  <span class="menu-item__dots" aria-hidden="true"></span>
+                  <span class="menu-item__price">180,-</span>
+                </li>
+                <li class="menu-item">
+                  <span class="menu-item__amount">200 g</span>
+                  <span class="menu-item__name">Zeleninové lečo s klobásou, brambory vařené</span>
+                  <span class="menu-item__dots" aria-hidden="true"></span>
+                  <span class="menu-item__price">170,-</span>
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="col-lg-5">
+            <div class="menu-group reveal">
+              <h3 class="menu-group__title">Jídla na objednávku</h3>
+              <ul class="list-unstyled mb-0">
+                <li class="menu-item">
+                  <span class="menu-item__amount">150 g</span>
+                  <span class="menu-item__name">Přírodní vepřový kotlet, sázené vejce</span>
+                  <span class="menu-item__dots" aria-hidden="true"></span>
+                  <span class="menu-item__price">180,-</span>
+                </li>
+                <li class="menu-item">
+                  <span class="menu-item__amount">150 g</span>
+                  <span class="menu-item__name">Kuřecí řízek naruby</span>
+                  <span class="menu-item__dots" aria-hidden="true"></span>
+                  <span class="menu-item__price">170,-</span>
+                </li>
+                <li class="menu-item">
+                  <span class="menu-item__amount">120 g</span>
+                  <span class="menu-item__name">Smažený hermelín</span>
+                  <span class="menu-item__dots" aria-hidden="true"></span>
+                  <span class="menu-item__price">140,-</span>
+                </li>
+              </ul>
+            </div>
+
+            <div class="menu__aside reveal">
+              <p class="mb-2">Za poloviční porce účtujeme <strong>75&nbsp;% ceny</strong>.</p>
+              <p class="mb-0">Seznam alergenů na vyžádání u&nbsp;obsluhy.</p>
+              <div class="d-grid gap-2 mt-4">
+                <button type="button" class="btn btn-cream" data-bs-toggle="modal" data-bs-target="#imageModal" data-img="images/jidelni-listek.png" data-alt="Jídelní lístek – Středa 10. června 2026">Zobrazit lístek</button>
+                <a href="tel:+420735076713" class="btn btn-outline-cream">Objednávky: 735 076 713</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ======= BEER BAND ======= -->
+    <section class="band">
+      <div class="band__bg" aria-hidden="true">
+        <img src="images/pivo-2.jpg" alt="" loading="lazy">
+      </div>
+      <div class="band__overlay" aria-hidden="true"></div>
+      <div class="container position-relative">
+        <p class="band__quote mb-0 reveal">
+          „Pivo tak čerstvé, že snad slyšíte,<br>jak vám šeptá <em>na&nbsp;zdraví</em>.“
+        </p>
+      </div>
+    </section>
+
+    <!-- ======= NÁPOJOVÝ LÍSTEK ======= -->
+    <section class="drinks section-pad" id="napojovy-listek">
+      <div class="container">
+        <div class="text-center drinks__head">
+          <p class="eyebrow reveal">Nápojový lístek</p>
+          <h2 class="section-title reveal">Co si dáte k pití?</h2>
+        </div>
+
+        <div class="row g-5">
+
+          <div class="col-md-6 col-xl-4 reveal">
+            <h3 class="drink-group__title">Pivo čepované</h3>
+            <div class="drink-table drink-table--two">
+              <div class="drink-table__head">
+                <span></span><span>0,5 l</span><span>0,3 l</span>
+              </div>
+              <div class="drink-row"><span>Pilsner Urquell světlý ležák</span><span>55,-</span><span>36,-</span></div>
+              <div class="drink-row"><span>Radegast ryze hořká 12°</span><span>44,-</span><span>34,-</span></div>
+              <div class="drink-row"><span>Kozel 10° černý</span><span>38,-</span><span>30,-</span></div>
+              <div class="drink-row"><span>Gambrinus nepasterizovaná 10°</span><span>35,-</span><span>26,-</span></div>
+              <div class="drink-row"><span>Řezané pivo</span><span>38,-</span><span>30,-</span></div>
+              <div class="drink-row"><span>Birell světlý</span><span>—</span><span>25,-</span></div>
+            </div>
+
+            <h3 class="drink-group__title drink-group__title--sub">Pivo lahvové</h3>
+            <div class="drink-table">
+              <div class="drink-row"><span>Prazdroj 12°</span><span class="drink-row__vol">0,5 l</span><span>45,-</span></div>
+            </div>
+
+            <h3 class="drink-group__title drink-group__title--sub">Teplé nápoje</h3>
+            <div class="drink-table">
+              <div class="drink-row"><span>Káva</span><span class="drink-row__vol"></span><span>30,-</span></div>
+              <div class="drink-row"><span>Káva se smetanou</span><span class="drink-row__vol"></span><span>33,-</span></div>
+              <div class="drink-row"><span>Káva se šlehačkou</span><span class="drink-row__vol"></span><span>45,-</span></div>
+              <div class="drink-row"><span>Alžírská káva</span><span class="drink-row__vol"></span><span>65,-</span></div>
+              <div class="drink-row"><span>Alžírská káva (instant)</span><span class="drink-row__vol"></span><span>65,-</span></div>
+              <div class="drink-row"><span>Nescafé</span><span class="drink-row__vol"></span><span>30,-</span></div>
+              <div class="drink-row"><span>Nescafé se smetanou</span><span class="drink-row__vol"></span><span>33,-</span></div>
+              <div class="drink-row"><span>Nescafé se šlehačkou</span><span class="drink-row__vol"></span><span>45,-</span></div>
+              <div class="drink-row"><span>Espresso se smetanou</span><span class="drink-row__vol"></span><span>40,-</span></div>
+              <div class="drink-row"><span>Čaj</span><span class="drink-row__vol"></span><span>30,-</span></div>
+              <div class="drink-row"><span>Svařené víno bílé / červené</span><span class="drink-row__vol">0,2 l</span><span>65,-</span></div>
+              <div class="drink-row"><span>Grog tuzemský (rum 4 cl)</span><span class="drink-row__vol"></span><span>50,-</span></div>
+            </div>
+          </div>
+
+          <div class="col-md-6 col-xl-4 reveal">
+            <h3 class="drink-group__title">Nealkoholické nápoje</h3>
+            <div class="drink-table">
+              <div class="drink-row"><span>Birell ovocný dle nabídky</span><span class="drink-row__vol">0,5 l</span><span>38,-</span></div>
+              <div class="drink-row"><span>Kofola točená</span><span class="drink-row__vol">0,1 l</span><span>9,-</span></div>
+              <div class="drink-row"><span>Koli limo — malina, citron, oranž</span><span class="drink-row__vol">0,3 l</span><span>28,-</span></div>
+              <div class="drink-row"><span>Semtex, Frisco spritz</span><span class="drink-row__vol">0,5 l</span><span>55,-</span></div>
+              <div class="drink-row"><span>RC Cola, Chito Tonic, Vinea, 7&nbsp;UP</span><span class="drink-row__vol">0,25 l</span><span>45,-</span></div>
+              <div class="drink-row"><span>Curiosa ovocné džusy</span><span class="drink-row__vol">0,25 l</span><span>45,-</span></div>
+              <div class="drink-row"><span>Rajec — sycená, jemně sycená, nesycená</span><span class="drink-row__vol">0,3 l</span><span>28,-</span></div>
+              <div class="drink-row"><span>Voda s citrónem</span><span class="drink-row__vol">0,5 l</span><span>15,-</span></div>
+            </div>
+
+            <h3 class="drink-group__title drink-group__title--sub">Vína a sekty</h3>
+            <div class="drink-table">
+              <div class="drink-row"><span>Cinzano Bianco</span><span class="drink-row__vol">0,1 l</span><span>50,-</span></div>
+              <div class="drink-row"><span>Sekt Bohemia</span><span class="drink-row__vol">0,75 l</span><span>250,-</span></div>
+              <div class="drink-row"><span>Víno bílé</span><span class="drink-row__vol">0,2 l</span><span>45,-</span></div>
+              <div class="drink-row"><span>Víno bílé dle nabídky</span><span class="drink-row__vol">0,7 l</span><span>250,-</span></div>
+              <div class="drink-row"><span>Víno červené</span><span class="drink-row__vol">0,2 l</span><span>45,-</span></div>
+              <div class="drink-row"><span>Prosecco dle nabídky</span><span class="drink-row__vol">0,75 l</span><span>250,-</span></div>
+            </div>
+          </div>
+
+          <div class="col-md-6 col-xl-4 reveal">
+            <h3 class="drink-group__title">Destiláty</h3>
+            <div class="drink-table drink-table--two">
+              <div class="drink-table__head">
+                <span></span><span>0,02 l</span><span>0,04 l</span>
+              </div>
+              <div class="drink-row"><span>Johnnie Walker</span><span>30,-</span><span>60,-</span></div>
+              <div class="drink-row"><span>Jameson</span><span>30,-</span><span>60,-</span></div>
+              <div class="drink-row"><span>Tullamore Dew</span><span>30,-</span><span>60,-</span></div>
+              <div class="drink-row"><span>Jack Daniel’s Honey</span><span>30,-</span><span>60,-</span></div>
+              <div class="drink-row"><span>Gin Beefeater</span><span>30,-</span><span>60,-</span></div>
+              <div class="drink-row"><span>Tequila</span><span>30,-</span><span>60,-</span></div>
+              <div class="drink-row"><span>Baileys</span><span>30,-</span><span>60,-</span></div>
+              <div class="drink-row"><span>Jägermeister</span><span>30,-</span><span>60,-</span></div>
+              <div class="drink-row"><span>Vodka Finlandia</span><span>30,-</span><span>60,-</span></div>
+              <div class="drink-row"><span>Vodka Stoli</span><span>25,-</span><span>50,-</span></div>
+              <div class="drink-row"><span>Rum Božkov Originál / kávový</span><span>20,-</span><span>40,-</span></div>
+              <div class="drink-row"><span>Captain Morgan Gold, Republica Božkov</span><span>25,-</span><span>50,-</span></div>
+              <div class="drink-row"><span>Meruňkovice</span><span>20,-</span><span>40,-</span></div>
+              <div class="drink-row"><span>Becherovka, Lemond</span><span>25,-</span><span>50,-</span></div>
+              <div class="drink-row"><span>Fernet Stock, Citrus, „Z“</span><span>20,-</span><span>40,-</span></div>
+              <div class="drink-row"><span>Peprmintka</span><span>20,-</span><span>40,-</span></div>
+              <div class="drink-row"><span>Griotte</span><span>20,-</span><span>40,-</span></div>
+              <div class="drink-row"><span>Vaječný likér</span><span>20,-</span><span>40,-</span></div>
+              <div class="drink-row"><span>Amundsen, broskev</span><span>20,-</span><span>40,-</span></div>
+              <div class="drink-row"><span>Jelzin gold</span><span>20,-</span><span>40,-</span></div>
+              <div class="drink-row"><span>Berentzen polar</span><span>20,-</span><span>40,-</span></div>
+              <div class="drink-row"><span>Krvesaj</span><span>20,-</span><span>40,-</span></div>
+              <div class="drink-row"><span>Slivovice</span><span>20,-</span><span>40,-</span></div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ======= ZAHRÁDKA ======= -->
+    <section class="garden section-pad" id="zahradka">
+      <div class="container">
+        <div class="row g-5 align-items-center">
+          <div class="col-lg-6 order-lg-2 reveal">
+            <div class="garden__media">
+              <figure class="garden__photo garden__photo--main mb-0">
+                <img src="images/zahradka-2.jpg" alt="Letní zahrádka s dřevěnými lavicemi" loading="lazy" class="w-100 h-100 object-fit-cover">
+              </figure>
+              <figure class="garden__photo garden__photo--small mb-0">
+                <img src="images/zahradka-1.jpg" alt="Zahrádka obrostlá břečťanem" loading="lazy" class="w-100 h-100 object-fit-cover">
+              </figure>
+            </div>
+          </div>
+
+          <div class="col-lg-6 order-lg-1">
+            <p class="eyebrow reveal">Letní zahrádka</p>
+            <h2 class="section-title mb-4 reveal">Přijďte si posedět<br>na naši zahrádku</h2>
+            <p class="garden__text reveal">
+              Představte si to — posezení na malebné hospodské zahrádce
+              v&nbsp;Rokycanech. Sluníčko vás jemně hladí po tváři, ve vzduchu je
+              cítit vůně čerstvého chmele. Kolem vás bzučí hovor spokojených
+              hostů, občas proložený srdečným smíchem.
+            </p>
+            <p class="garden__text reveal">
+              Na stole před vámi stojí orosený půllitr piva, které je tak
+              čerstvé, že snad slyšíte, jak vám šeptá <em>„na&nbsp;zdraví“</em>.
+            </p>
+            <p class="garden__question reveal">
+              Kdy jindy si můžete dopřát tu pravou atmosféru, kde se čas zastaví
+              a&nbsp;vy si prostě jen vychutnáváte život?
+            </p>
+            <div class="reveal">
+              <a href="tel:+420735076713" class="btn btn-ink">Zavolejte nám</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ======= GALERIE ======= -->
+    <section class="gallery">
+      <div class="container-fluid px-0">
+        <div class="row g-0 row-cols-2 row-cols-lg-4">
+          <div class="col reveal">
+            <div class="ratio ratio-1x1">
+              <img src="images/pivo-1.jpg" alt="Čepování piva" loading="lazy" class="w-100 h-100 object-fit-cover gallery-img" role="button" data-bs-toggle="modal" data-bs-target="#imageModal" data-img="images/pivo-1.jpg">
+            </div>
+          </div>
+          <div class="col reveal">
+            <div class="ratio ratio-1x1">
+              <img src="images/interier.jpg" alt="Interiér – lokál" loading="lazy" class="w-100 h-100 object-fit-cover gallery-img" role="button" data-bs-toggle="modal" data-bs-target="#imageModal" data-img="images/interier.jpg">
+            </div>
+          </div>
+          <div class="col reveal">
+            <div class="ratio ratio-1x1">
+              <img src="images/zahradka-kvetiny.jpg" alt="Letní zahrádka s květinami" loading="lazy" class="w-100 h-100 object-fit-cover gallery-img" role="button" data-bs-toggle="modal" data-bs-target="#imageModal" data-img="images/zahradka-kvetiny.jpg">
+            </div>
+          </div>
+          <div class="col reveal">
+            <div class="ratio ratio-1x1">
+              <img src="images/zahradka-1.jpg" alt="Letní zahrádka" loading="lazy" class="w-100 h-100 object-fit-cover gallery-img" role="button" data-bs-toggle="modal" data-bs-target="#imageModal" data-img="images/zahradka-1.jpg">
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ======= KDE NÁS NAJDETE ======= -->
+    <section class="contact section-pad" id="kontakt">
+      <div class="container">
+        <div class="text-center contact__head">
+          <p class="eyebrow reveal">Kde nás najdete</p>
+          <h2 class="section-title reveal">Trefíte k nám?</h2>
+        </div>
+
+        <div class="row g-5 align-items-start">
+          <div class="col-lg-5 reveal">
+            <div class="contact-block">
+              <p class="contact-block__label">Adresa</p>
+              <p class="contact-block__value mb-0">Josefa Tomáška 59<br>337 01 Rokycany</p>
+            </div>
+            <div class="contact-block">
+              <p class="contact-block__label">Telefon</p>
+              <p class="contact-block__value mb-0"><a href="tel:+420735076713">+420 735 076 713</a></p>
+            </div>
+            <div class="contact-block">
+              <p class="contact-block__label">E-mail</p>
+              <p class="contact-block__value mb-0"><a href="mailto:hostinec.hradcany@seznam.cz">hostinec.hradcany@seznam.cz</a></p>
+            </div>
+            <div class="contact-block">
+              <p class="contact-block__label">Otevírací doba</p>
+              <table class="hours-table">
+                <tr><td>Pondělí–Pátek</td><td>10:00–22:00</td></tr>
+                <tr><td>Sobota–Neděle</td><td>14:00–22:00</td></tr>
+                <tr class="hours-table__note"><td colspan="2">Kuchyně: všední dny 10:00–14:00</td></tr>
+              </table>
+            </div>
+          </div>
+
+          <div class="col-lg-7 reveal">
+            <div class="map-frame">
+              <div class="ratio ratio-4x3">
+                <iframe
+                  src="https://maps.google.com/maps?q=Josefa%20Tom%C3%A1%C5%A1ka%2059%2C%20337%2001%20Rokycany&t=m&z=16&output=embed&iwloc=near"
+                  title="Mapa – Hostinec na Hradčanech, Josefa Tomáška 59, Rokycany"
+                  loading="lazy"
+                  referrerpolicy="no-referrer-when-downgrade"
+                  allowfullscreen></iframe>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ======= FOOTER ======= -->
+  <footer class="footer">
+    <div class="container">
+      <div class="row gy-4 footer__top">
+        <div class="col-lg-4">
+          <p class="footer__logo">Hostinec<br>na Hradčanech</p>
+          <p class="footer__blurb mb-0">Rodinný hostinec v Rokycanech od roku 1890. Poctivá česká kuchyně a dobře vychlazené pivo.</p>
+        </div>
+
+        <div class="col-6 col-lg-2">
+          <p class="footer__heading">Navigace</p>
+          <a href="#uvod">Úvod</a>
+          <a href="#pribeh">Náš příběh</a>
+          <a href="#jidelni-listek">Jídelní lístek</a>
+          <a href="#napojovy-listek">Nápojový lístek</a>
+          <a href="#zahradka">Zahrádka</a>
+          <a href="#kontakt">Kde nás najdete</a>
+        </div>
+
+        <div class="col-6 col-lg-3">
+          <p class="footer__heading">Kontakt</p>
+          <a href="tel:+420735076713">+420 735 076 713</a>
+          <a href="mailto:hostinec.hradcany@seznam.cz">hostinec.hradcany@seznam.cz</a>
+          <p class="mb-0 mt-1">Josefa Tomáška 59<br>337 01 Rokycany</p>
+        </div>
+
+        <div class="col-12 col-lg-3">
+          <p class="footer__heading">Otevírací doba</p>
+          <p class="mb-1">Po–Pá &nbsp;10:00–22:00</p>
+          <p class="mb-1">So–Ne &nbsp;14:00–22:00</p>
+          <p class="footer__muted mb-0">Kuchyně: všední dny 10:00–14:00</p>
+        </div>
+      </div>
+
+      <div class="d-flex flex-column flex-md-row justify-content-between gap-2 footer__bottom">
+        <p class="mb-0">© <span id="year">2026</span> Hostinec na Hradčanech</p>
+        <p class="footer__muted mb-0">Za poloviční porce účtujeme 75 % ceny · Seznam alergenů na vyžádání u obsluhy</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ======= IMAGE MODAL (Bootstrap) ======= -->
+  <div class="modal fade" id="imageModal" tabindex="-1" aria-hidden="true" aria-label="Náhled obrázku">
+    <div class="modal-dialog modal-dialog-centered modal-xl">
+      <div class="modal-content bg-transparent border-0 shadow-none">
+        <div class="modal-body p-0 position-relative text-center">
+          <button type="button" class="btn-close btn-close-white position-absolute top-0 end-0 m-3 z-3" data-bs-dismiss="modal" aria-label="Zavřít"></button>
+          <img src="" alt="Náhled" id="imageModalImg" class="img-fluid modal-img">
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>
