@@ -1,0 +1,15 @@
+{
+  "name": "fitstreak",
+  "version": "1.0.0",
+  "private": true,
+  "description": "FitStreak - panduan workout gym & rumahan dengan streak, langganan, leaderboard, dan komunitas.",
+  "type": "module",
+  "engines": {
+    "node": ">=22.13"
+  },
+  "scripts": {
+    "start": "node server/index.js",
+    "dev": "FITSTREAK_DEV=1 FITSTREAK_DEMO=1 node server/index.js",
+    "test": "node --test \"server/*.test.js\""
+  }
+}
