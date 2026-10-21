@@ -1,6 +1,7 @@
 import { html, mount, $, toast, busy, todayStr, parseYmd, MONTHS, WEEKDAYS, emptyState, loading } from '../ui.js';
 import { get, put, store, loadMe, showError, isActive } from '../api.js';
 import { renderPaywall } from '../app.js';
+import { trackingStart } from '../components.js';
 
 const ORDER = [1, 2, 3, 4, 5, 6, 0]; // Senin..Minggu
 const HEAD = ['Sen', 'Sel', 'Rab', 'Kam', 'Jum', 'Sab', 'Min'];
@@ -47,6 +48,7 @@ export default async function calendar(ctx) {
     mount(body, html`<div class="cal-loading">${loading()}</div>`);
     const data = await get(`/api/calendar?month=${month}`);
     if (!ctx.alive()) return;
+    const since = trackingStart(store.me);
     const first = parseYmd(`${month}-01`);
     const lead = (first.getDay() + 6) % 7;
     const cells = [];
@@ -57,7 +59,8 @@ export default async function calendar(ctx) {
       let status = '';
       if (d.completed) { cls += ' is-done'; status = '✓'; }
       else if (d.isRest || !d.dayId) cls += ' is-rest';
-      else if (d.date < today) { cls += ' is-miss'; status = '✕'; }
+      else if (d.date < today && d.date >= since) { cls += ' is-miss'; status = '✕'; }
+      else if (d.date < today) cls += ' is-past';
       else cls += ' is-plan';
       if (d.date === today) cls += ' is-today';
       const label = d.dayName || (d.isRest || !d.dayId ? 'Rest' : '');

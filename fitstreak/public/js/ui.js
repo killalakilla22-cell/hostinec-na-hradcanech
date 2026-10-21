@@ -33,8 +33,8 @@ export const multiline = (text) => raw(escapeHtml(text).replace(/\r?\n/g, '<br>'
 
 /** Replace a container's content with a SafeHtml template. */
 export function mount(container, tpl) {
-  if (!(tpl instanceof SafeHtml)) throw new Error('mount() requires html`` template');
-  container.innerHTML = tpl.str;
+  // Plain strings are treated as text (escaped); only html``/raw() output is inserted as markup.
+  container.innerHTML = renderValue(tpl);
   return container;
 }
 
@@ -70,6 +70,7 @@ export function toast(message, type = 'info', ms = 3200) {
   const icon = { success: '✓', error: '!', info: 'i', warn: '!' }[type] || 'i';
   const t = el('div', { class: `toast toast-${type}` }, el('span', { class: 'toast-icon', 'aria-hidden': 'true' }, icon), el('span', {}, message));
   toastRoot.append(t);
+  while (toastRoot.children.length > 3) toastRoot.firstElementChild.remove();
   requestAnimationFrame(() => t.classList.add('show'));
   setTimeout(() => {
     t.classList.remove('show');

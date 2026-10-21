@@ -1,6 +1,7 @@
 // FitStreak SPA: hash router + app shell.
 import { html, raw, mount, $, $$, toast, avatar, storageGet, errorState, loading } from './ui.js';
 import { store, loadMe, onPaywall, ApiError } from './api.js';
+import { lastLocked } from './components.js';
 
 // ---------- Icons (inline SVG, stroke = currentColor) ----------
 const P = {
@@ -150,7 +151,7 @@ export function renderPaywall(container = $('#main .page') || $('#main')) {
   if (!container) return;
   const sub = store.me?.subscription;
   const locked = sub?.status === 'locked';
-  const last = sub?.history?.length ? sub.history[sub.history.length - 1] : null;
+  const last = lastLocked(sub);
   mount(container, html`
     <section class="paywall card card-hero">
       <div class="paywall-icon" aria-hidden="true">🔒</div>

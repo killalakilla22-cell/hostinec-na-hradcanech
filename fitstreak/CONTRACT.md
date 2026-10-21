@@ -98,3 +98,9 @@ Leaderboard
 
 Dev
 - Jika env `FITSTREAK_DEV=1`, `POST /api/dev/time-travel` `{days}` menggeser "now" server (untuk demo evaluasi siklus). Selain itu 404.
+
+## Catatan implementasi (setelah build)
+- `subscription.history` urut terbaru dulu; satu siklus bisa punya baris `paid` (saat mulai) dan `renewed`/`locked` (saat dievaluasi).
+- `POST /api/dev/time-travel {days}` menambah offset (kumulatif), respons `{ok, offsetDays, now, today}`.
+- Leaderboard: nilai 0 tidak ditampilkan; nilai sama → rank sama.
+- Script test: `node --test "server/*.test.js"`.

@@ -125,7 +125,7 @@ export function barChart(container, bars, { height = 200, yLabel = '' } = {}) {
         const d = h <= 0 ? '' : `M${x},${pad.t + ih}V${y + r}Q${x},${y} ${x + r},${y}H${x + bw - r}Q${x + bw},${y} ${x + bw},${y + r}V${pad.t + ih}Z`;
         return `${d ? `<path class="bar${b.highlight ? ' bar-hi' : ''}" data-i="${i}" d="${d}"/>` : ''}
           ${b.y > 0 && bw >= 14 ? `<text class="bar-val" x="${x + bw / 2}" y="${y - 5}" text-anchor="middle">${b.y}</text>` : ''}
-          ${i % labelEvery === 0 || i === bars.length - 1 ? `<text class="axis" x="${x + bw / 2}" y="${H - 8}" text-anchor="middle">${escapeHtml(b.x)}</text>` : ''}`;
+          ${(i % labelEvery === 0 && (i === bars.length - 1 || bars.length - 1 - i >= labelEvery)) || i === bars.length - 1 ? `<text class="axis" x="${x + bw / 2}" y="${H - 8}" text-anchor="middle">${escapeHtml(b.x)}</text>` : ''}`;
       }).join('')}
       <line class="baseline" x1="${pad.l}" x2="${W - pad.r}" y1="${pad.t + ih}" y2="${pad.t + ih}"/>
       <rect class="hit" x="${pad.l}" y="${pad.t}" width="${iw}" height="${ih}" fill="transparent"/>

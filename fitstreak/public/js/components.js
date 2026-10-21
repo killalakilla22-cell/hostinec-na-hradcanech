@@ -1,6 +1,14 @@
 // Reusable render fragments shared by several pages.
 import { html, raw, pct, formatDate } from './ui.js';
 
+/** Subscription history newest-first (server sends newest-first; tolerate ascending too). */
+export function historyNewestFirst(sub) {
+  const h = [...(sub?.history || [])];
+  if (h.length > 1 && Number(h[0].cycleNumber) < Number(h[h.length - 1].cycleNumber)) h.reverse();
+  return h;
+}
+export const lastLocked = (sub) => historyNewestFirst(sub).find((h) => h.result === 'locked') || null;
+
 export const STATUS_LABEL = { active: 'Aktif', locked: 'Terkunci', unpaid: 'Belum Bayar' };
 
 /** Completion progress bar with the 50% requirement marker. */
@@ -19,7 +27,7 @@ export function subscriptionCard(sub, { compact = false } = {}) {
   if (!sub) return '';
   const status = sub.status || 'unpaid';
   if (status !== 'active') {
-    const last = sub.history?.length ? sub.history[sub.history.length - 1] : null;
+    const last = lastLocked(sub);
     return html`
       <section class="card sub-card sub-${status}">
         <div class="card-head"><h3>Langganan</h3><span class="pill pill-${status}">${STATUS_LABEL[status]}</span></div>
@@ -88,4 +96,13 @@ export function safeUrl(u) {
     const url = new URL(u, location.origin);
     return url.protocol === 'https:' || url.protocol === 'http:' ? url.href : '';
   } catch { return ''; }
+}
+
+/** First local date that counts for "missed" marks (before the user's first paid cycle nothing is missed). */
+export function trackingStart(me) {
+  const h = me?.subscription?.history || [];
+  const src = h.length ? h[0].start : me?.subscription?.cycleStart || me?.user?.createdAt;
+  const d = src ? new Date(src) : null;
+  if (!d || isNaN(d)) return '0000-00-00';
+  return `${d.getFullYear()}-${String(d.getMonth() + 1).padStart(2, '0')}-${String(d.getDate()).padStart(2, '0')}`;
 }

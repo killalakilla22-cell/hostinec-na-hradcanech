@@ -1,6 +1,6 @@
 import { html, raw, mount, $, todayStr, formatDate, WEEKDAYS_SHORT, parseYmd, storageGet, loading } from '../ui.js';
 import { get, store, loadMe, isActive } from '../api.js';
-import { subscriptionCard, weekDates } from '../components.js';
+import { subscriptionCard, weekDates, trackingStart } from '../components.js';
 
 function greeting() {
   const h = new Date().getHours();
@@ -24,6 +24,7 @@ export default async function dashboard(ctx) {
     </header>
     <div class="dash-grid">
       <div class="dash-today" id="today-slot">${loading('Memuat workout hari ini…')}</div>
+      <div class="dash-side">
       <section class="card streak-card">
         <div class="flame-wrap ${stats.currentStreak > 0 ? 'lit' : ''}" aria-hidden="true">🔥</div>
         <div>
@@ -41,7 +42,8 @@ export default async function dashboard(ctx) {
           <span><b class="text">${stats.totalSets}</b> set selesai</span>
         </div>
       </section>
-      <div class="dash-sub">${subscriptionCard(subscription, { compact: true })}</div>
+      ${subscriptionCard(subscription, { compact: true })}
+      </div>
     </div>`);
 
   renderWeek(ctx, today, active);
@@ -135,7 +137,8 @@ async function renderWeek(ctx, today, active) {
     if (info) {
       if (info.completed) { cls += ' wd-done'; mark = '✓'; }
       else if (info.isRest || !info.dayId) { cls += ' wd-rest'; mark = '–'; }
-      else if (d < today) { cls += ' wd-miss'; mark = '✕'; }
+      else if (d < today && d >= trackingStart(store.me)) { cls += ' wd-miss'; mark = '✕'; }
+      else if (d < today) { cls += ' wd-past'; mark = '·'; }
       else { cls += ' wd-plan'; mark = '•'; }
     }
     if (d === today) cls += ' wd-today';
